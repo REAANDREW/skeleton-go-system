@@ -22,3 +22,8 @@ _testmain.go
 *.exe
 *.test
 *.prof
+skeleton-go-application
+dist
+skeleton-go-system
+sample-config.json
+*.out

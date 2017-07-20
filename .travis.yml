@@ -1,0 +1,18 @@
+language: go
+sudo: false
+go:
+    - 1.8
+    - tip
+before_install:
+  - make deploy-deps
+  - make deps
+before_script:
+  - make ensure-version-increment
+script:
+  - make lint
+  - make test
+  - make build
+notifications:
+after_success:
+    - make cross-platform-compile
+    - make upload-release
